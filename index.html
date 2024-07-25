@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukhoi's Build/Kill</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(195, 195, 195);
+            color: #333;
+        }
+
+        .navbar {
+            background-color: rgb(73, 28, 28);
+            /* GMod Blue */
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+
+        .navbar-brand:hover,
+        .nav-link:hover {
+            color: #ffda44 !important;
+            /* Hover color */
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(73, 28, 28, 0.8), rgba(73, 28, 28, 0.8)), url('https://gmod.facepunch.com/images/posts/full_width_photos/3946.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: #ffda44;
+            border-color: #ffda44;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #fff;
+        }
+
+        .copy-paste-box {
+            background-color: rgba(128, 128, 128, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .copy-paste-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-section h2 {
+            margin-bottom: 30px;
+            color: rgb(73, 28, 28);
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background-color: rgb(73, 28, 29);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sukhoi's B/K</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html" target="_blank">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3292132170"
+                            target="_blank">Content</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://sukhoisbk.noclip.me/" target="_blank">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://discord.gg/BKUgYhnw5g">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Welcome to Sukhoi's B/K - ArcCW/ACF3/DakTank/PAC3</h1>
+            <p>The server where your dreams die.</p>
+            <a href="#rules-section" class="btn btn-primary btn-lg">Rules</a>
+            <div class="copy-paste-box">
+                <h5>Copy the server IP:</h5>
+                <input type="text" value="51.81.155.121:2002" id="serverIp" readonly onclick="copyToClipboard()">
+            </div>
+        </div>
+    </div>
+
+    <div class="container content-section">
+        <h2>About This Server</h2>
+        <p>In this server, the cornerstone of creativity lies in ACFs expansive crafting system. Unlike standard
+            gameplay, where crafting is often limited to predefined recipes, ACF3 enables players to combine materials,
+            structures, and even behaviors to engineer entirely new creations. Imagine constructing intricate machinery,
+            awe-inspiring monuments, or fantastical landscapes—all crafted from the ground up using ACFs intuitive
+            tools.</p>
+    </div>
+
+    <div class="container content-section" id="rules-section">
+        <h2>Rules</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">General</h3>
+                        <ul class="list-unstyled">
+                            <li>1a. Please do not attempt to try and exploit. If one of our staff team finds you
+                                exploiting,
+                                they will ask you to turn it off. If you don't comply and are found using it again, it
+                                will
+                                be a permanent ban.</li>
+                            <br>
+                            <li>2a. Do not spam, this rule covers a vast selection of spam, from chat spam, prop spam,
+                                voice
+                                spam, and other various types of spam.</li>
+                            <br>
+                            <li>3a. Do not waste the admin's time; they are trying to solve your problems, and they
+                                cannot
+                                help you if you are messing around. This also applies to punishments.</li>
+                            <br>
+                            <li>4a. Do not ask for ranks; they will definitely not be given to you. If you had a
+                                previous
+                                rank
+                                and it has been reset, tell us your previous alias if you have changed it, and we will
+                                find
+                                out what rank you had.</li>
+                            <br>
+                            <li>5a. Do not abuse your rank; if you are a trusted member, you are trusted, not legally
+                                immune
+                                to any rule broken. This applies to users and administrators as well.</li>
+                            <br>
+                            <li>6a. You need to understand/speak a basic level of English to be able to stay on the
+                                server.
+                                (Not for discriminatory reasons, our staff team do not have a broad language range, and
+                                it
+                                would be difficult to make you understand what is right or wrong.)</li>
+                            <br>
+                            <li>7a. Do not take matters into your own hands unless you have the privilege to do so.
+                                Jailing
+                                people will be accepted. If you see someone doing something wrong and you have enough
+                                evidence to prove it and there is a staff member on, you must jail first, then explain
+                                to
+                                the staff member.</li>
+                            <br>
+                            <li>8a. Time farming is a kick/warn offense.</li>
+                            <br>
+                            <li>9a. Try to be friendly to other people. If people don't like what you are doing, don't
+                                say
+                                "stay mad" or "skill issue," especially for higher members. It paints our community in a
+                                bad
+                                light for new people.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Building</h3>
+                        <ul class="list-unstyled">
+                            <li>1b. E2 can be used by everyone, but if abused, it will be restricted from you only, and
+                                you
+                                will be rewarded with a warning.</li>
+                            <br>
+                            <li>2b. Normal dupes are restricted from users because people can use public dupes to crash
+                                the
+                                server, and plus, the GMOD duplicator is cringe.</li>
+                            <br>
+                            <li>3b. Do not spam, this rule covers a vast selection of spam, from chat spam, prop spam,
+                                voice
+                                spam, and other various types of spam.</li>
+                            <br>
+                            <li>4b. There is a Build-mode; to use it, just use !build, and to go back to PVP, you need
+                                to
+                                put
+                                in chat !pvp. Abusing this will definitely result in a warning, and depending on the
+                                actions,
+                                you may be punished with a ban as well.</li>
+                            <br>
+                            <li>5b. People build on this server, and if you get in the way of their building, you will
+                                be
+                                warned.</li>
+                            <br>
+                            <li>6b. While building, if you are pasting a base or something down and it is a big build,
+                                tell
+                                admins first before pasting it.</li>
+                            <br>
+                            <li>7b. Wire abuse is not tolerated (Ex: Wire jails, auto-lock turrets).</li>
+                            <br>
+                            <li>8b. Stealing others' dupes is strictly forbidden and will get you permanently banned
+                                from
+                                the
+                                server.</li>
+                            <br>
+                            <li>9b. We have an ACF ruleset that you need to follow while being on the server and using
+                                ACF;
+                                please follow them, or your buildings will be counted as "illegal".</li>
+                            <br>
+                            <li>10b. We have designated build zones on maps. If we don't have one on the map, please
+                                alert
+                                me
+                                (Sukhoi).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Combat</h3>
+                        <ul class="list-unstyled">
+                            <li>1c. PVP is allowed because there is a build mode. Abusing the build mode, like using
+                                bombs
+                                or
+                                trying to bypass the build-mode damage system, will get you stripped of the build
+                                command
+                                and
+                                warned.</li>
+                            <br>
+                            <li>2c. Spawn-kill is not against the rules; you can use build mode to avoid certain people.
+                            </li>
+                            <br>
+                            <li>3c. Heal before and after a 1v1 or PVP fight, not in the fight itself, and do not go
+                                over
+                                100
+                                HP when in a PVP fight; use armor instead of abusive HP values.</li>
+                            <br>
+                            <li>4c. You must know that being in PVP means that all people can kill you.</li>
+                            <br>
+                            <li>5c. Changing the size of your player model in PVP is prohibited and should not be used;
+                                this
+                                will get you warned.</li>
+                            <br>
+                            <li>6c. No-clip in PVP is strictly forbidden. If you fail to stop, we will strip you of the
+                                no-clip command.</li>
+                            <br>
+                            <li>7c. Using ACF against people/infantry is okay, but if they do not have any tech at hand,
+                                please take note of that since not everyone is as privileged as you with vehicles, etc.
+                                (As
+                                well as daktek/daktank)</li>
+                            <br>
+                            <li>8c. If you make a base, there needs to be a door that opens and closes with a keypad or
+                                scanner.</li>
+                            <br>
+                            <li>9c. You can use anti no-clip areas in your bases, but please make sure you enable it for
+                                administrators.</li>
+                            <br>
+                            <li>10c. It is forbidden to Prop kill; it is against the rules.</li>
+                            <br>
+                            <li>11c. Prop push is not allowed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Literally Just Me. All rights reserved.</p>
+        <p>&copy; 2024 Sukhoi's B/K. All rights reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("serverIp");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // Why you would be playing gmod on a mobile device I don't know.,..,. And frankly I DO NOT care...
+            document.execCommand("copy");
+            alert("Copied the IP: " + copyText.value);
+        }
+    </script>
+</body>
+
+</html>
